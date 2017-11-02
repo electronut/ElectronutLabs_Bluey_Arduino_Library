@@ -1,5 +1,5 @@
 /**
- * APDS9301.c
+ * APDS9301.cpp
  *
  * Arduino source file for APDS9301 ambient light sensor.
  *

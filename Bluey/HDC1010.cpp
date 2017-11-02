@@ -1,5 +1,5 @@
 /**
- * HDC1010.c
+ * HDC1010.cpp
  *
  * Arduino source file for HDC1010 Temperature/Humidity sensor.
  *

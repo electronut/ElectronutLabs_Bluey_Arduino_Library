@@ -1,5 +1,5 @@
 /**
- * bluey_wire.h
+ * bluey_wire.cpp
  *
  * Arduino source file using Wire library to establish I2C communication with sensors.
  *

@@ -1,9 +1,9 @@
 /**
  * Bluey: Example project to obtain sensor data and transmit data via BLE to smartphone using Nordc UART Service
- * 
+ *
  * author: Electronut Labs
  * website: www.electronut.in
- * 
+ *
  * reference: serial example from BLEPeripheral library by Sandeep Mistry
  */
 
@@ -26,11 +26,11 @@
 // create ble serial instance, see pinouts above
 BLESerial BLESerial(BLE_REQ, BLE_RDY, BLE_RST);
 
-LSM6DS3 myIMU; //Default constructor is I2C, addr 0x6B. Changed to 0x6A in SparkfunLSM6DS3.h file
+LSM6DS3 myIMU(I2C_MODE, 0x6A); //Default constructor defines I2C address as 0x6B. Bluey uses 0x6A.
 
 volatile float lux;
 volatile float temp;
-volatile float humid; 
+volatile float humid;
 volatile float accX, accY, accZ;
 volatile float gyroX, gyroY, gyroZ;
 
@@ -56,27 +56,27 @@ void read_sensor_data(void)
   gyroY = myIMU.readFloatGyroY();
   gyroZ = myIMU.readFloatGyroZ();
 }
-  
+
 void setup()
 {
   Wire.begin();
-  
+
   // custom services and characteristics can be added as well
   BLESerial.setLocalName("Bluey");
 
   BLESerial.begin();
-    
-  HDC1010_init(TEMP_OR_HUMID);  
+
+  HDC1010_init(TEMP_OR_HUMID);
   APDS9301_init();
-  myIMU.begin(); 
+  myIMU.begin();
 }
 
 void loop()
-{ 
+{
   BLESerial.poll();
-   
+
   read_sensor_data();
-  
+
   rx_data = BLESerial.read();
 
   switch(rx_data) {
@@ -115,7 +115,7 @@ void loop()
     BLESerial.print(accX, 1);
     BLESerial.print(" Y:");
     BLESerial.print(accY, 1);
-    BLESerial.print(" Z:"); 
+    BLESerial.print(" Z:");
     BLESerial.println(accZ, 1);
   }
   else if(packet_GYR){
@@ -123,9 +123,9 @@ void loop()
     BLESerial.print(gyroX, 1);
     BLESerial.print(" Y:");
     BLESerial.print(gyroY, 1);
-    BLESerial.print(" Z:"); 
+    BLESerial.print(" Z:");
     BLESerial.println(gyroZ, 1);
-       
+
   }
   else{
     BLESerial.println("Request data");
