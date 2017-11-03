@@ -1,14 +1,17 @@
 # ElectronutLabs_Bluey_Arduino_Library
 Bluey library for use with Arduino.
 
+
+## Examples
+
 Bluey directory contains examples demonstrating the board's usage and functionalities. 
 
 **bluey_sensor_test** example demonstrates the use of Nordic UART service to transmit temperature, humidity, ambient light, accelerometer and gyroscope readings from Bluey to nRF Connect mobile application on your smartphone.
 
 
-**Copy *Bluey* to Documents/Arduino/libraries directory.**
+## Usage
 
-### Steps
+**Copy *Bluey* to Documents/Arduino/libraries directory.**
 
 * Set the device in bootloader mode. To trigger bootloader, press and hold button1 **(SW3)** , press the Reset button **(RST)** and then release button1. More details on bootloader can be found at main Bluey [repository](https://github.com/electronut/ElectronutLabs-bluey)
 
