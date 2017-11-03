@@ -1,7 +1,12 @@
 # ElectronutLabs_Bluey_Arduino_Library
-Bluey library for use with Arduino.
 
-![](images/arduino-ide.png)![](images/bluey1.2-sm.jpg)
+![](images/bluey1.2-sm.jpg)
+
+![](images/arduino-ide.png)
+
+[Bluey][1] is a BLE (Bluetooth Low Energy) development board with Temperature, Humidity, Ambient Light and Accelerometer sensors. Bluey uses the Nordic nRF52832 BLE SoC (System on a Chip) which has an ARM Cortex-M4F CPU and a 2.4 GHz radio that supports BLE and other proprietary wireless protocols. It also supports NFC, and in fact the board comes with a built-in NFC PCB antenna.
+
+This library enables you to use Bluey for with the Arduino platform.
 
 ## Examples
 
@@ -28,3 +33,4 @@ Bluey directory contains examples demonstrating the board's usage and functional
 
 * Once the code is uploaded, perform a manual reset by pressing **RST** button once.
 
+[1]: http://electronut.in/portfolio/bluey/
