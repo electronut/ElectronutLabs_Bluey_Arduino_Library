@@ -5,7 +5,7 @@ Bluey library for use with Arduino.
 
 ### Steps
 
-* Set the device in bootloader mode as described above. 
+* Set the device in bootloader mode. To trigger bootloader, press and hold button1, press the Reset button and then release button1. More details on bootloader can be found at main Bluey [repository](https://github.com/electronut/ElectronutLabs-bluey)
 
 * Go to: Tools > Boards. Select **Electronut labs Bluey**.
 
